@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <style>
+        /* Fondo de toda la página */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('fondo2.png'); /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        /* Encabezado con imagen centrada */
+        header {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        header img {
+            width: 300px; /* Tamaño inicial */
+            height: auto; /* Mantener proporción */
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Botones dinámicos */
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 20px;
+            background-color: rgba(253, 93, 0, 0.7); /* Fondo negro transparente */
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: rgba(250, 0, 0, 0.9); /* Fondo más oscuro al pasar el mouse */
+            transform: scale(1.1); /* Efecto de aumento de tamaño */
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        /* Botón de salir */
+        .btn-exit {
+            background-color: red;
+            color: white;
+            padding: 15px 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn-exit:hover {
+            background-color: darkred; /* Más oscuro al pasar el mouse */
+            transform: scale(1.1);
+        }
+
+        .btn-exit:focus {
+            outline: none;
+        }
+
+        /* Contenedor de botones */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            width: 300px; /* Ajusta este valor según el ancho deseado */
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px; /* Agrega un espacio alrededor de los botones */
+            border-radius: 10px; /* Opcional: Agrega bordes redondeados */
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Encabezado con imagen centrada -->
+    <header>
+        <img src="titulo.png" alt="Encabezado">
+    </header>
+
+    <!-- Contenedor de botones -->
+    <div class="button-container">
+        <button class="btn" onclick="window.location.href='jugar.html'">Jugar</button>
+        <button class="btn" onclick="window.location.href='videos.html'">Videos Tutoriales</button>
+        <button class="btn" onclick="window.location.href='clases prueba.html'">Clases Prueba</button>
+        <button class="btn-exit" onclick="closePage()">Salir</button>
+    </div>
+
+    <script>
+        // Función para cerrar la página
+        function closePage() {
+            if (confirm("¿Estás seguro de que deseas salir de la página?")) {
+                window.close(); // Intenta cerrar la ventana
+                if (window.opener) {
+                    window.opener = null;
+                    window.open('', '_self');
+                    window.close();
+                } else {
+                    alert("No es posible cerrar esta pestaña automáticamente debido a restricciones del navegador.");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+

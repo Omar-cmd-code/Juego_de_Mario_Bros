@@ -1,0 +1,206 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos Tutoriales</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('fondo2.png'); /* Imagen de fondo para toda la página */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        header {
+            margin: 20px 0;
+        }
+        header img {
+            width: 400px; /* Ajusta el ancho del encabezado */
+            height: auto; /* Mantiene la proporción */
+            display: block;
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para contraste */
+            border-radius: 10px;
+        }
+        .video-grid {
+            display: flex;
+            flex-wrap: wrap; /* Permite que los elementos se ajusten */
+            gap: 20px; /* Espacio entre videos */
+            justify-content: center; /* Centra los videos */
+        }
+        .video-item {
+            flex: 1 1 calc(33.333% - 20px); /* Cada video ocupa 1/3 del ancho */
+            max-width: calc(33.333% - 20px);
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .video-item h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #ffcc00; /* Títulos dinámicos en color */
+        }
+        video {
+            display: block;
+            width: 100%; /* Se ajusta al ancho del contenedor */
+            border: 3px solid #ffcc00; /* Marco dinámico */
+            border-radius: 5px;
+        }
+        .btn-play {
+            background-color: #ffcc00;
+            color: black;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn-play:hover {
+            background-color: #ff9900;
+        }
+        /* Media query para dispositivos móviles */
+        @media (max-width: 768px) {
+            .video-item {
+                flex: 1 1 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+                max-width: 100%;
+            }
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+        }
+
+        .btn-footer {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s; /* Agrega transición de color */
+        }
+
+        .btn-footer:hover {
+            background-color: #ff7300; /* Cambia el color al pasar el cursor */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="titulo.png" alt="Encabezado" />
+    </header>
+    <div class="container">
+        <div class="video-grid">
+            <div class="video-item">
+                <h2>Tutorial 1: ¡Comencemos a crear nuestro juego de Mario!</h2>
+                <video width="640" height="360" controls poster="poster/MarioPo1.png">
+                    <source src="https://drive.google.com/uc?id=1MnjnnWU1BhUcQhhymhkijlGaefG43C3D" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <button class="btn-play" onclick="window.open('https://drive.google.com/file/d/1MnjnnWU1BhUcQhhymhkijlGaefG43C3D/view?usp=sharing', '_blank')">Reproducir Video</button>
+            </div>
+
+            <div class="video-item">
+                <h2>Tutorial 2: Animaciones de Mario</h2>
+                <video width="640" height="360" controls poster="poster/MarioPo2.png">
+                    <source src="https://drive.google.com/uc?id=1I77DE9TyN6lx3EVmBgBo3T1OvLVl-qPh" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <button class="btn-play" onclick="window.open('https://drive.google.com/file/d/1I77DE9TyN6lx3EVmBgBo3T1OvLVl-qPh/view?usp=sharing', '_blank')">Reproducir Video</button>
+            </div>
+
+            <div class="video-item">
+                <h2>Tutorial 3: Movimiento horizontal del Fondo</h2>
+                <video width="640" height="360" controls poster="poster/MarioPo3.png">
+                    <source src="https://drive.google.com/uc?id=1Gt9aGw4kKtSftFcIwBTdse0cxuL0nMVF" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <button class="btn-play" onclick="window.open('https://drive.google.com/file/d/1Gt9aGw4kKtSftFcIwBTdse0cxuL0nMVF/view?usp=sharing', '_blank')">Reproducir Video</button>
+            </div>
+
+            <div class="video-item">
+                <h2>Tutorial 4: Creación de Goombas</h2>
+                <video width="640" height="360" controls poster="poster/MarioPo4.png">
+                    <source src="https://drive.google.com/uc?id=1NBtEbOvSq75o7f96aVLIG_Sp-TEjjWg7" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <button class="btn-play" onclick="window.open('https://drive.google.com/file/d/1NBtEbOvSq75o7f96aVLIG_Sp-TEjjWg7/view?usp=sharing', '_blank')">Reproducir Video</button>
+            </div>
+
+            <div class="video-item">
+                <h2>Tutorial 5: Modificación de Goombas</h2>
+                <video width="640" height="360" controls poster="poster/MarioPo5.png">
+                    <source src="https://drive.google.com/uc?id=1c-iG1ThGbzGen5PlbRnthcM628R5zrzO" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <button class="btn-play" onclick="window.open('https://drive.google.com/file/d/1c-iG1ThGbzGen5PlbRnthcM628R5zrzO/view?usp=sharing', '_blank')">Reproducir Video</button>
+            </div>
+
+            <div class="video-item">
+                <h2>Tutorial 6: ¡Mario, el súper saltador!</h2>
+                <video width="640" height="360" controls poster="poster/MarioPo6.png">
+                    <source src="https://drive.google.com/uc?id=1wWESruOBpRmcpGL1VEkmq0NoAmi17sT4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <button class="btn-play" onclick="window.open('https://drive.google.com/file/d/1wWESruOBpRmcpGL1VEkmq0NoAmi17sT4/view?usp=sharing', '_blank')">Reproducir Video</button>
+            </div>
+
+            <div class="video-item">
+                <h2>Tutorial 7: ¡El Goomba ataca!</h2>
+                <video width="640" height="360" controls poster="poster/MarioPo7.png">
+                    <source src="https://drive.google.com/uc?id=1CBos6b7cNSkuxof0fLhp7CBuLTRNTXpI" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <button class="btn-play" onclick="window.open('https://drive.google.com/file/d/1CBos6b7cNSkuxof0fLhp7CBuLTRNTXpI/view?usp=sharing', '_blank')">Reproducir Video</button>
+            </div>
+
+            <div class="video-item">
+                <h2>Tutorial 8: ¡Mario a toda velocidad!</h2>
+                <video width="640" height="360" controls poster="poster/MarioPo8.png">
+                    <source src="https://drive.google.com/uc?id=1ZrYP-mM1LbJIiu9_RsDc5qqKYMqQvPCu" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <button class="btn-play" onclick="window.open('https://drive.google.com/file/d/1ZrYP-mM1LbJIiu9_RsDc5qqKYMqQvPCu/view?usp=sharing', '_blank')">Reproducir Video</button>
+            </div>
+
+            <div class="video-item">
+                <h2>Tutorial 9: La meta de Mario</h2>
+                <video width="640" height="360" controls poster="poster/MarioPo9.png">
+                    <source src="https://drive.google.com/uc?id=1-Zd9vjH-EkUpSUv_9_K947CbL0lv1ujR" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <button class="btn-play" onclick="window.open('https://drive.google.com/file/d/1-Zd9vjH-EkUpSUv_9_K947CbL0lv1ujR/view?usp=sharing', '_blank')">Reproducir Video</button>
+            </div>
+
+            <div class="video-item">
+                <h2>Tutorial 10: Goomba desaparece al caer y animación al llegar a la meta</h2>
+                <video width="640" height="360" controls poster="poster/MarioPo10.png">
+                    <source src="https://drive.google.com/uc?id=1OkFUwK0uEllsw_sVdphTUj1QuV0Gbbev" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <button class="btn-play" onclick="window.open('https://drive.google.com/file/d/1OkFUwK0uEllsw_sVdphTUj1QuV0Gbbev/view?usp=sharing', '_blank')">Reproducir Video</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a href="index.html" class="btn-footer">PAGINA PRINCIPAL</a>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
